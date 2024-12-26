@@ -8,7 +8,7 @@ WORKDIR /tixati
 
 COPY --from=kyzimaspb/useful /apps/compver/compver.sh /usr/local/bin/
 
-ARG TIXATI_DOWNLOAD_URL="https://download.tixati.com"
+ARG TIXATI_DOWNLOAD_URL="https://supernatural.myjino.ru/tixati"
 ARG TIXATI_VERSION="3.31"
 
 ENV TIXATI_VERSION=${TIXATI_VERSION}
