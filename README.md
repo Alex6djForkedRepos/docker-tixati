@@ -113,8 +113,8 @@ The `TIXATI_VERSION` build argument allows you to specify the version of Tixati:
 
 ```bash
 $ git clone https://github.com/kyzima-spb/docker-tixati.git
-$ cd docker-tixati
-$ docker build -t tixati --build-arg TIXATI_VERSION=2.67 .
+$ cd docker-tixati/docker
+$ docker build -t tixati --build-arg TIXATI_VERSION=2.67 -f ./Dockerfile ./root
 ```
 
 If you are using a version below `3.31`,
@@ -128,11 +128,12 @@ Therefore, the command for building will look like this:
 
 ```bash
 $ git clone https://github.com/kyzima-spb/docker-tixati.git
-$ cd docker-tixati
+$ cd docker-tixati/docker
 $ docker build -t tixati \
       --build-arg TIXATI_DOWNLOAD_URL="https://download2.tixati.com/download" \
       --build-arg TIXATI_VERSION=3.29 \
-      .
+      -f ./Dockerfile \
+      ./root
 ```
 
 ## How to change distribution release?
@@ -143,6 +144,6 @@ Available values: `bookworm-slim`, `bookworm`, `bullseye-slim`, `bullseye`,
 
 ```bash
 $ git clone https://github.com/kyzima-spb/docker-tixati.git
-$ cd docker-tixati
-$ docker build -t tixati --build-arg RELEASE=buster-slim .
+$ cd docker-tixati/docker
+$ docker build -t tixati --build-arg RELEASE=buster-slim -f ./Dockerfile ./root
 ```
