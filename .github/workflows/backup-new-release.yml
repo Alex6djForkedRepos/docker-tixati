@@ -19,7 +19,7 @@ jobs:
         name: Checkout
         uses: actions/checkout@v7
       -
-        name: Backup Tixati installers to FTP
+        name: Backup Tixati installers
         run: ./backup.sh
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
